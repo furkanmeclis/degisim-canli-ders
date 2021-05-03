@@ -226,6 +226,17 @@ export default {
     },
     addDers(){
       Metro.dialog.open('#demoDialog2')
+            this.datas = {
+            _id:null,
+            phone: null,
+            meetingID: null,
+            pass: null,
+            name: null,
+            teacher:null,
+            link: null,
+            title: null
+
+          }
     },
     ekleDers(){
       let data = this.datas
