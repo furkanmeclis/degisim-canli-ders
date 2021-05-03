@@ -1,7 +1,9 @@
 <template>
  <div>
 
-   <router-view/>
+   <transition name="page" mode="out-in">
+     <router-view/>
+   </transition>
  </div>
 </template>
 <script>
@@ -11,3 +13,15 @@ export default {
   }
 }
 </script>
+<style>
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+
+  transform: scale(0);
+}
+.page-enter-active, .page-leave-active {
+  transition: all 375ms;
+}
+
+</style>
